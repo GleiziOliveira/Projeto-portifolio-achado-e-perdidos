@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acesse a plataforma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="page" class="flex">
+    <div>
+      <header>
+        <img class="logo" src="./assets/logo.svg" alt="Logo" />
+      </header>
+      <main>
+        <div class="headline">
+          <h1>Acesse a plataforma</h1>
+          <p>Faça login ou inscreva-se para ajudar a divulgar itens perdidos na faculdade!</p>
+        </div>
+        <form id="loginForm">
+          <div class="input-wrapper">
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              placeholder="Digite seu e-mail" 
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <div class="label-wrapper flex">
+              <label for="senha"> Senha </label>
+              <a href="./esquecisenha.html"> Esqueceu a senha? </a>
+            </div>
+
+            <input
+              type="password"
+              id="senha"
+              placeholder="Digite sua senha"
+            />
+
+            <img
+              onclick="togglePassword()"
+              class="eye"
+              src="./assets/eye-off.svg"
+              alt=""
+            />
+            <img
+              onclick="togglePassword()"
+              class="eye hide"
+              src="./assets/eye.svg"
+              alt=""
+            />
+          </div>
+
+          <button type="submit">Entrar</button>
+
+          <div class="create-account">
+            Ainda não tem uma conta?
+            <a href="./cadastropessoa.html"> Inscreva-se </a>
+          </div>
+        </form>
+      </main>
+    </div>
+    
+    <img src="./assets/img.png" alt="" />
+  </div>
+
+  <script>
+    function togglePassword() {
+      /* toggle é troca, então troca a situação do eye e função geral para senha aparecer e sumir a senha*/
+      document
+        .querySelectorAll(".eye") /* SelectorAll é todos os que tem .eye */
+        .forEach((eye) => eye.classList.toggle("hide")) /* para cada eye executar a função quando tocar no olho*/
+
+      const senha = document.getElementById("senha");
+      const type = /* aqui é a função para mostrar a senha ou sumir */
+        senha.getAttribute("type") == "password" ? "text" : "password"
+
+      senha.setAttribute("type", type)
+    }
+
+    // Função para redirecionar para a página "home"
+    function redirectToHome() {
+      // Substitua "home.html" pelo caminho correto da página "home"
+      window.location.href = "home.html";
+    }
+
+    // Adiciona um evento de clique ao botão "Entrar"
+    const loginForm = document.getElementById("loginForm");
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita o envio padrão do formulário
+      redirectToHome();
+    });
+  </script>
+</body>
+</html>

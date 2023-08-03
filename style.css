@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --color-base-white: #ffffff;
+  --color-base-gray-100: #e1e1e6;
+  --color-base-gray-200: #8c8c99;
+  --color-base-gray-300: #7c7c8a;
+  --color-base-gray-400: #323238;
+  --color-base-blue-grey:#475569;
+  --color-base-blue-grey-mid:#94a3b8;
+  --color-produto-blue-light: #60A4EC;
+  --color-produto-blue-mid: #1B3556;
+  --color-produto-blue-inter:#1e293b;
+  --color-background-fundo:#121215;
+  font-size: 62.5%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+
+body {
+  font-size: 1.6rem;
+}
+
+button {
+  all: unset; /* ele tira as propriedades padão do button, para ficar mais fácil a estilização*/
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-produto-blue-mid);
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#page {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+#page > * {
+  width: 50%;
+  height: 100%;
+}
+
+#page > div {
+  padding: 2rem 11rem;
+  overflow-y: scroll;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.logo{
+  
+    display: block; /* Define como bloco para aplicar margens automaticamente */
+    margin: 0 auto; /* Margem automática nas laterais centralizará horizontalmente */
+}
+
+
+header img {
+Width:196px; 
+Height:196px;
+
+}
+
+#page > div {
+  padding: 2rem 11rem;
+}
+
+main {
+  margin-top: 5rem;
+  max-width: 38.4rem;
+  overflow-y: scroll ;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.headline {
+  max-width: 35rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+  line-height: 5.5rem;
+  color: var(--color-produto-blue-mid);
+}
+
+h1 + p {
+  color: var(--color-base-blue-grey);
+  margin-top: 1.6rem;
+}
+
+form {
+  margin-top: 4rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: var(--color-produto-blue-mid);
+}
+
+.label-wrapper {
+  justify-content: space-between;
+}
+
+.label-wrapper label + a {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+input::placeholder {
+  color: var(--color-base-blue-grey-mid);
+}
+
+input {
+  width: 100%;
+
+  background: var(--color-base-white);
+  border: 0.1rem solid var(--color-base-gray-100);
+  border-radius: 0.4rem;
+
+  padding: 1.6rem 1.2rem;
+
+  margin-top: 0.8rem;
+
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+
+  color: var(--color-produto-blue-inter);
+}
+
+input:focus,
+input:hover {
+  border: 0.1rem solid var(--color-produto-blue-mid);
+  outline: 0;
+}
+
+input:disabled {
+  opacity: 0.35;
+}
+
+::-ms-reveal {
+  display: none;
+}
+
+.eye {
+  width: 2rem;
+  height: 2rem;
+
+  position: absolute;
+  top: 55%;
+  right: 5%;
+}
+
+.hide {
+  display: none;
+}
+
+form button {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 2.4rem;
+
+  background: var(--color-produto-blue-mid);
+  border-radius: 0.4rem;
+
+  width: 100%;
+
+  font-weight: bold;
+  color: var(--color-base-white);
+
+  margin-block: 3.2rem;
+}
+
+form button:focus {
+  outline: 0.2rem solid var(--color-produto-blue-inter);
+  border-radius: 0.2rem;
+}
+
+form button:hover {
+  background: var(--color-produto-blue-mid);
+}
+
+.create-account {
+  color: var(--color-base-blue-grey);
+}
+
+/*Busca */
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input[type="text"] {
+  padding-right: 2.5rem;
+}
+
+.input-wrapper .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-produto-blue-mid);
+  font-size: 1.6rem;
+}
+
+/*Social links */
+
+footer {
+  position: relative;
+}
+
+.wrapper-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.col-a {
+  flex-grow: 1;
+
+}
+
+.col-b {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding-top: 4px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.social-links li {
+  margin-left: 1rem;
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/*Exponsivo*/
+@media (max-width: 900px) {
+  #page > * {
+    width: 150%;
+
+  }
+  #page > img {
+    display: none;
+    height: 50%;
+  }
+
+  #page > div {
+    padding: 11rem;
+  }
+
+  main {
+    max-width: 100%;
+  }
+
+  aside{
+    border-right: none;
+    padding: 32px 12px;
+
+  }
+}
+
+@media (max-width: 500px) {
+  #page > div {
+    padding: 4rem;
+  }
+}

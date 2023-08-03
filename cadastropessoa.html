@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro do Aluno FAM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="page" class="flex">
+      <img src="./assets/img.png" alt="Imagem" />
+    <div>
+      <header>
+        <img class="logo" src="./assets/logo.svg" alt="Logo" />
+      </header>
+      <main>
+        <form>
+         <fieldset>
+    <h1>Cadastro do Aluno FAM</h1>
+    <label for="nome">Nome:</label>
+    <input id="nome" type="text" name="nome" required />
+    
+    <label for="email">E-mail:</label>
+    <input id="email" type="email" name="email" required />
+    
+    <label for="ra">RA:</label>
+    <input id="ra" type="text" name="ra" required />
+    
+    <label for="curso">Curso:</label>
+    <input id="curso" type="text" name="curso" required />
+    
+    <label for="cpf">CPF:</label>
+    <input id="cpf" type="text" name="cpf" required />
+    
+    <label for="senha">Senha:</label>
+    <input id="senha" type="password" name="senha" required />
+    
+    <label for="foto">Foto:</label>
+    <input id="foto" type="file" name="foto" accept="image/*" />
+    <label for="foto" class="file-label">Escolha um arquivo</label>
+    <span class="file-name">Nenhum arquivo selecionado</span>
+  </fieldset>
+  
+  <button type="submit">Cadastrar</button>
+          <br><br>
+          <footer>
+            <div class="wrapper-footer">
+              <div class="col-a">
+                <a href="https://www.fam.br/">FAM.BR</a>
+              </div>
+              <div class="col-b">
+                <ul class="social-links">
+                  <li>
+                    <a href="https://www.youtube.com/@famamericana">
+                      <img src="./assets/youtube.svg" alt="youtube">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/fam-faculdade-de-americana-38893a114/">
+                      <img src="./assets/linkedin.svg" alt="Linkedin">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/famamericana/?locale=pt_BR">
+                      <img src="./assets/facebook.svg" alt="Facebook">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/famamericana/">
+                      <img src="./assets/instagram.svg" alt="instagram">
+                    </a>
+                  </li>
+                </ul>    
+              </div>      
+            </div>
+          </footer>
+        </form>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById("foto");
+    const fileLabel = document.querySelector(".file-label");
+    const fileName = document.querySelector(".file-name");
+
+    fileInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        fileLabel.textContent = file.name;
+        fileName.textContent = "Arquivo selecionado";
+      } else {
+        fileLabel.textContent = "Escolha um arquivo";
+        fileName.textContent = "Nenhum arquivo selecionado";
+      }
+    });
+
+    const searchInput = document.getElementById("search");
+    const itemList = document.querySelectorAll(".item");
+
+    searchInput.addEventListener("input", function () {
+      const searchTerm = this.value.toLowerCase();
+
+      itemList.forEach(function (item) {
+        const itemName = item.textContent.toLowerCase();
+        const itemVisible = itemName.includes(searchTerm);
+        item.style.display = itemVisible ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

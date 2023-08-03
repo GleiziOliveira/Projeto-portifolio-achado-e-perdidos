@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="imagem/png" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Home</title>
+  </head>
+  <body>
+    <aside>
+      <img src="./assets/logonome.svg" alt="Logo da FAM">
+      <img src="./assets/gleizi.jpg" alt="Foto da Gleizi sorrindo">
+      <p>Maria Luiza Silva</p>
+      <p>20230000</p>
+      <p>Ciência da Computação</p>
+      <p>333.444.999-00</p>
+      
+    </aside>
+    <nav>
+      <ul class="menu">
+        <li><a href="./home.html"><strong>Home</strong></a></li>
+        <li><a href="./caditens.html"><strong>Cadastrar Itens</strong></a></li>
+        <li><a href="./index.html"><strong>Sair</strong></a></li>
+      </ul>
+      <form action="buscar.php">
+        <div class="input-wrapper">
+          <input type="text" id="search" name="search" placeholder="Digite sua busca" />
+          <label for="search" class="search-icon">&#128269;</label>
+        </div>
+      </form>
+      <div class="title-itens">
+        <h1>Itens que encontrei</h1>
+      </div>
+      <div class="itens">
+        <small>15 de Maio de 2023</small> <!-- Data do dia que achou o item -->
+        <h1>Calculadora Cientifica</h1>
+        <div>
+          <img src="./assets/cientifica.png" alt="é uma calculadora cientifica preta meio acinzentada" />
+        </div>
+        <span>Código: 0000000</span>
+        <span>Local: Achado no Bl.03 Sala 12</span>
+        <span>Status: Está no NICOM</span>
+      </div>
+      <div class="itens">
+        <small>01 de Maio de 2023</small> <!-- Data do dia que achou o item -->
+        <h1>Calculadora Branca</h1>
+        <div>
+          <img src="./assets/calculadora.png" alt="uma calculadora branca" />
+        </div>
+        <span>Código: 0000001</span>
+        <span>Local: Achado no Bl.02 Sala 48</span>
+        <span>Status: Está no NICOM</span>
+      </div>
+    </nav>
+  </body>
+</html>

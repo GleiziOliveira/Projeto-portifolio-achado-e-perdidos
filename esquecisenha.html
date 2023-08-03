@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esqueci Minha Senha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="page" class="flex">
+    <div>
+      <header>
+        <img class="logo" src="./assets/logo.svg" alt="" />
+      </header>
+      <main>
+        <div class="headline">
+          <h1>Esqueceu sua Senha</h1>
+        </div>
+        <form>
+          <div class="forgot-password">
+            <label for="forgot-email">Esqueci minha Senha</label>
+            <input id="forgot-email" type="email" name="forgot-email" required placeholder="Digite seu e-mail" />
+            <button type="submit">Enviar E-mail</button>
+          </div>
+
+          <div class="footer">
+            Suporte: <a href="mailto:informatica@fam.br">informatica@fam.br</a>
+          </div>
+        </form>
+      </main>
+    </div>
+    <img src="./assets/img.png" alt="" />
+  </div>
+  <script>
+    function togglePassword() {
+      document
+        .querySelectorAll(".eye")
+        .forEach((eye) => eye.classList.toggle("hide"));
+
+      const senha = document.getElementById("senha");
+      const type = senha.getAttribute("type") == "password" ? "text" : "password";
+
+      senha.setAttribute("type", type);
+    }
+  </script>
+</body>
+</html>

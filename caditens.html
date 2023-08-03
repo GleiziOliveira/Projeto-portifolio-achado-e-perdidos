@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="imagem/png" href="./assets/favicon.png" />
+  <link rel="stylesheet" href="./styles2.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+  <title>Home</title>
+</head>
+<body>
+  <aside>
+    <img src="./assets/logonome.svg" alt="Logo da FAM">
+    <img src="./assets/gleizi.jpg" alt="Foto da Gleizi sorrindo">
+    <p>Maria Luiza Silva</p>
+    <p>20230000</p>
+    <p>Ciência da Computação</p>
+    <p>333.444.999-00</p>
+  </aside>
+  <nav>
+    <nav class="menu-geral">
+      <ul class="menu">
+        <li><a href="./home.html"><strong>Home</strong></a></li>
+        <li><a href="./caditens.html"><strong>Cadastrar Itens</strong></a></li>
+        <li><a href="./login.html"><strong>Sair</strong></a></li>
+      </ul>
+    </nav>
+  <main id="app">
+    <form action="">
+      <div class="step-progress">
+        <strong class="active step" data-step>Itens</strong>
+        <svg
+          width="8"
+          height="14"
+          viewBox="0 0 8 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.41663 2L6.41663 7L1.41663 12"
+            stroke="#323238"
+            stroke-width="2"
+            stroke-linecap="square"
+          />
+        </svg>
+        <strong data-step>Local</strong>
+        <svg
+          width="8"
+          height="14"
+          viewBox="0 0 8 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.41663 2L6.41663 7L1.41663 12"
+            stroke="#323238"
+            stroke-width="2"
+            stroke-linecap="square"
+          />
+        </svg>
+        <strong data-step>Descrição</strong>
+      </div>
+      <div class="form-step active">
+        <div class="content">
+          <div class="input-wrapper">
+            <label for="item">Item</label>
+            <input
+              id="item"
+              name="item"
+              type="text"
+              placeholder="Digite o item achado"
+              required
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="data">Data</label>
+            <input
+              id="data"
+              name="data"
+              type="date"
+              placeholder=""
+              required
+            />
+          </div>
+        </div>
+        <div class="button-wrapper justify-end">
+          <button class="btn primary" data-action="next">CONTINUAR</button>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="content">
+          <div class="input-wrapper">
+            <label for="local-encontrado">Local que achou</label>
+            <input
+              id="local-encontrado"
+              name="local-encontrado"
+              type="text"
+              placeholder="Digite o local que o item foi encontrado"
+              required
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="local-about">Descreva o Item</label>
+            <textarea
+              id="local-about"
+              name="local-about"
+              placeholder="Fale sobre o item"
+            ></textarea>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button type="button" class="btn secondary" data-action="prev">
+            VOLTAR
+          </button>
+          <button type="button" class="btn primary" data-action="next">
+            CONTINUAR
+          </button>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="content">
+          <div class="input-wrapper">
+            <label for="foto">Foto:</label>
+            <input id="foto" type="file" name="foto" accept="image/*" />
+            <label for="foto" class="file-label">Escolha um arquivo</label>
+            <span class="file-name">Nenhum arquivo selecionado</span>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button type="button" class="btn secondary" data-action="prev">
+            VOLTAR
+          </button>
+          <button class="btn primary" type="submit">ENVIAR RESPOSTA</button>
+        </div>
+      </div>
+    </form>
+  </main>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>
