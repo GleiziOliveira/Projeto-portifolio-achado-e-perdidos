@@ -1,7 +1,7 @@
 # 
 
 <p align="center">
-  <img src="https://i.ibb.co/1LdDqYd/imagem-2023-05-20-154514009.png" alt="Demonstração do projeto" width="100%" />
+  <img src="./assets/tela_lgin.png" alt="Demonstração do projeto" width="100%" />
 </p>
 
 Você pode visualizar o projeto através [DESSE LINK](). 
