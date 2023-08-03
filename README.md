@@ -1,10 +1,10 @@
 # 
 
 <p align="center">
-  <img src="./assets/tela_lgin.png" alt="Demonstração do projeto" width="100%" />
+  <img src="./assets/tela_lgin.png" alt="Demonstração do projeto" width="50%" />
 </p>
 
-Você pode visualizar o projeto através [DESSE LINK](). 
+Você pode visualizar o projeto através [DESSE LINK](https://gleizioliveira.github.io/Projeto-portifolio-achado-e-perdidos/). 
 
 ## 🚀 Tecnologias
 
